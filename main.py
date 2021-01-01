@@ -53,7 +53,7 @@ def get_maze_layout(img):
             cell_center = (col * CELL_SIZE + CELL_SIZE_HALVED, row * CELL_SIZE + CELL_SIZE_HALVED)
             possible_directions_for_cell = []
 
-            # We examine if there is a black wall in each direction.
+            # We examine if there is a white wall in each direction.
             for idx, direction in enumerate(DIRECTIONS):
                 img_part = safe_img_slicing(img, cell_center[1], cell_center[1] + LOOKAHEAD_LENGTH * direction[1], cell_center[0], cell_center[0] + LOOKAHEAD_LENGTH * direction[0])
 
